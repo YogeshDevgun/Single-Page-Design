@@ -34,10 +34,6 @@ header.masthead {
   line-height: 1.6;
 }
 
-.green {
-  background: #E1F9E7;
-}
-
 @media (min-width: 992px) {
   header.masthead>.overlay {
     padding: 10rem 0;
@@ -53,12 +49,46 @@ h2 {
   margin: 0px
 }
 
+.left_quote {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.right_quote {
+  position: absolute;
+  right: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .disp_inline {
   display: inline-flex;
 }
 
 a.navbar-brand, a.nav-link {
   color: black !important;
+}
+
+.navbar-nav li:nth-child(3) {
+  margin-right: 60px;
+}
+
+a.green_color {
+  color: #3FB662 !important;
+}
+
+.green {
+  background: #E1F9E7;
+}
+
+a.nav-link {
+  font-size: 13px;
+  font-weight: 700;
 }
 
 .col-md-3 {
@@ -108,7 +138,6 @@ a.navbar-brand, a.nav-link {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
-  padding: 10px 0px;
 }
 
 .user_name {
@@ -129,11 +158,28 @@ a.navbar-brand, a.nav-link {
 }
 
 .user_image {
+  position: relative;
   overflow: hidden;
 }
 
 .user_image img {
   width: 100%;
+}
+
+.user_image:hover:after {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  background: url('../img/linkedin.png') 52px 84px  no-repeat,  url('../img/twitter.jpg') 127px 84px  no-repeat;
+  background-size: 50px;
+  cursor: pointer;
+}
+
+.user_image:hover img {
+  opacity: 0.4;
 }
 
 .user_container {
